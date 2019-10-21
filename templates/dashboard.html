@@ -1,0 +1,345 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script defer src="{% static 'js/js/all.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/myStyles.css' %}">
+    <script src="{% static 'js/myJs.js' %}"></script>
+    {% block js_add %}
+    {% endblock %}
+    <title>Document</title>
+{% block style_block %}
+{% endblock %}
+</head>
+<body dir="rtl">
+<br>
+{# اون بالای بالا بخش شما اینجایید#}
+<div class="row">
+    <div class="col-2">
+        <p>شما اینجایید</p>
+    </div>
+    <div class="col-4">
+        <ul class="breadcrumb">
+            {% block breadcrumb_block %}
+                <li><a href="#">داشبورد</a> <span class="divider">/</span></li>
+            {% endblock %}
+        </ul>
+    </div>
+</div>
+{#پایان#}
+{#بخش نوبار و پاپ اور اسم کاربر#}
+<div class="row">
+    <div class="col-2">
+        <button type="button" class="btn" style="color:white;background: #375170" data-container="body"
+                data-toggle="popover"
+                data-placement="bottom">
+            سید کیان کشفی پور
+        </button>
+    </div>
+    <div class="col-10">
+        <nav class="nav">
+            <a class="nav-link active border border-info" href="#"> <i class="	fas fa-home"></i> داشبورد</a>
+            <a class="nav-link border border-info" href="#">کاره های من
+                <div class="badge badge-danger"><i class="	fas fa-plus"></i> افزودن</div>
+            </a>
+            <a class="nav-link border border-info" href="#">آگهی های من
+                <div class="badge badge-danger"><i class="	fas fa-plus"></i> افزودن</div>
+            </a>
+            <a class="nav-link border border-info" href="#"><i class="far fa-comment-alt"></i> گفت و گو </a>
+            <a class="nav-link border border-info" href="#">سوالات متداول</a>
+
+        </nav>
+    </div>
+</div>
+{#پایان#}
+<br>
+{#بخش وسط شامل فعالیت ها و وضعیت کاربر و تسک لیست#}
+{% block body_block %}
+    <div class="text-right" style="margin-left: 100px;margin-right: 100px">
+        <div class="jumbotron">
+            <div class="row">
+                {#آخرین فعالیت ها#}
+                <div class="col-lg-4 col-12">
+                    <i class="material-icons" style="font-size: 18px">poll</i>
+                    آخرین فعالیت ها
+                    <div class="card scroll">
+                        <ul class="timeline">
+                            <li>
+                                <a target="_blank" href="https://www.totoprayogo.com/#" class="float-right">ایجاد
+                                    کاره</a>
+                                <a href="#" class="float-left">۱۲ فروردین ۹۸</a>
+                                <br>
+                                <p class="text-right" style="font-size: 14px">
+                                    کاره با عنوان طراحی برنامه به زبان جاوا با موفقیت ایجاد شد و در لیست کاره های
+                                    شما
+                                    قرار گرفت و میتوانید آن را ببینید
+                                </p>
+                            </li>
+                            {% for i in '123456' %}
+                                <li>
+                                    <a href="#" class="float-right">ایجاد حساب کاربری</a>
+                                    <a href="#" class="float-left">۱ فروردین ۹۸</a>
+                                    <br>
+                                    <p class="text-right" style="font-size: 14px">
+                                        حساب کاربری شما با موفقیت در سایت واونت ایجاد شد
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {#پایان بخش آخرین فعالیت های#}
+                {# بخش وسط وضعیت کاربر و تراکنش و ... #}
+                <div class="col-lg-4 col-12">
+                    <i class="material-icons" style="font-size: 18px">sentiment_very_satisfied</i>
+                    حساب واونت
+                    <div class="card border-success">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="border">
+                                    <img src='{% static 'img/kian.jpg' %}' alt="kian"
+                                         class="img-thumbnail rounded-circle d-block mx-auto">
+                                    <p class="text-center" style="font-size: 16px">کیان کشفی پور</p>
+                                    <p class="text-center" style="font-size: 16px">امتیاز ۱۴۰۰</p>
+                                    <div class="text-center">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                    </div>
+                                    <hr>
+                                    <p class="text-center" style="font-size: 12px"><i class="fas fa-pencil-alt"></i>ویرایش
+                                        پروفایل </p>
+                                    <hr>
+                                    <p class="text-center " style="font-size: 12px">حالت تعطیلات</p>
+                                </div>
+                            </div>
+                            <div class="col-7" style="font-size: 13px">
+                                <br>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <i class="fas fa-wallet d-block mx-auto"
+                                           style="font-size:50px"></i>
+                                        <br>
+                                        <p class="text-center">
+                                            موجودی کیف واونت:
+                                        </p>
+                                        <div class="row">
+                                            <h4 class="text-center">
+                                                ۳۶/۲۰۰/۰۰۰
+                                            </h4>
+                                            <p class="text-muted">تومان</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="fas fa-dollar-sign d-block mx-auto" style="font-size: 50px"></i>
+                                        <br>
+                                        <p class="text-center">
+                                            درامد شما :
+                                        </p>
+                                        <div class="row">
+                                            <h4 class="text-center">
+                                                ۱/۲۰۰/۰۰۰
+                                            </h4>
+                                            <p class="text-muted">تومان</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <i class="fas fa-chart-pie d-block mx-auto" style="font-size: 50px"></i>
+                                        <br>
+                                        <p class="text-center">
+                                            کاره های انجام شده
+                                        </p>
+                                        <h5 class="text-center">۷ عدد</h5>
+                                    </div>
+                                    <div class="col-6">
+                                        <i class="	far fa-credit-card d-block mx-auto" style="font-size: 50px"></i>
+                                        <br>
+                                        <p class="text-center">
+                                            آگهی های انجام شده
+                                        </p>
+                                        <h4 class="text-center">
+                                            ۵ عدد
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {#        پایان بخش تراکنش ها#}
+                {#        بخش تسک لیست شخصی#}
+                <div class="col-lg-4 col-12">
+                    <i class="far fa-sticky-note" style="font-size: 18px"></i> تسک لیست شخصی
+                    <div class="card scroll">
+                        <form>
+                            <div class="form-group" style="margin: 10px">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"
+                                              placeholder="اینجا وارد کنید"></textarea>
+                            </div>
+                        </form>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                            <th>()</th>
+                            <th>عنوان تسک</th>
+                            <th>زمان ایجاد</th>
+                            <th>اولویت</th>
+                            </thead>
+                            {% for i in '0123456' %}
+                                <tr>
+                                    <td>
+                                        <form>
+                                            <div class="form-group">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </td>
+                                    <td><p>تکمیل پروفایل باید برای من در اولویت باشد. </p></td>
+                                    <td>۳روز پیش</td>
+                                    <td>
+                                        {#                                    <span class="badge badge-danger d-flex justify-content-center"#}
+                                        {#style="padding-bottom: 8px;padding-top: 8px">فوری</span>#}
+                                        <div class="dropdown">
+                                            <button class="btn btn-danger dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                فوری
+                                            </button>
+                                            <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                                                <button class="btn disabled dropdown-header text-center" href="#">اولویت
+                                                </button>
+                                                <button class="btn btn-danger dropdown-item" href="#">فوری</button>
+                                                <button class="btn btn-secondary dropdown-item" href="#">متوسط</button>
+                                                <button class="btn btn-info dropdown-item" href="#">پایین</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+                {#        پایان بخش تسک لیست شخصی#}
+
+            </div>
+        </div>
+    </div>
+    {#پایان بخش وسط#}
+    {#بخش راهنمایی پایین صفحه#}
+    <div style="margin-right: 100px;margin-left: 100px" class="text-right">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="d-block mx-auto" src="{% static 'img/Rectangle 126.png' %}">
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h4 style="color: #375170">چطور میتوانم فعالیت فریلنسینگ در واو داشته باشم؟</h4>
+                    <p> اول به صفحه افزودن کاره برو و با تعریف کاره جدید به کارفرما بگو چه‌کاره‌ای و توی انجام چه
+                        کارهایی
+                        تخصص داری. بعد از تعریف کاره می‌تونی به لیست آگهی‌ها بری و روی کارهایی که فکر می‌کنی از پسشون
+                        برمیای
+                        پیشنهاد بدی. هرچی نمونه‌کارهای بهتر و پروفایل جذاب‌تری داشته باشی، شانس این که بتونی پروژه بگیری
+                        بیشتره.</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-info"
+                                    style="padding-right: 30px; padding-left: 30px;color: white;background:#375170 ">
+                                افزودن
+                                کاره
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-info"
+                                    style="padding-right: 30px; padding-left: 30px;color: white;background:#375170 ">
+                                لیست
+                                آگهی ها
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h4 style="color: #375170">چطور میتوانم در واونت آگهی تعریف کنم؟</h4>
+                    <p>اگه پروژه‌ای داری و برای انجامش دنبال متخصص می‌گردی، کافیه از صفحه افزودن آگهی پروژه‌ت رو تعریف
+                        کنی و
+                        منتظر بمونی تا متخصصین اون حوزه پیشنهادهاشونو بهت بدن. اگه فریلنسر خاصی رو مدنظر داری که فک
+                        می‌کنی
+                        گزینه خوبی برای انجام اون کاره، بعد از تعریف آگهی به صفحه پروفایلش برو و پیشنهاد انجام پروژه‌ت
+                        رو
+                        بهش بده.</p>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn "
+                                    style="padding-right: 30px; padding-left: 30px;color: white;background:#375170">
+                                افزودن
+                                آگهی
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-info"
+                                    style="padding-right: 30px; padding-left: 30px;color: white;background:#375170 ">
+                                فریلنسرها
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<div class="popover-titleHTML" style="display: none">
+    <p class="text-center">@kian_kr</p>
+</div>
+<ul class="list-group align-middle align-items-baseline" style="display: none">
+    <li class="list-group-item "><i class="fas fa-pencil-alt"></i>ویرایش پروفایل</li>
+    <li class="list-group-item">حالت تعطیلات</li>
+    <li class="list-group-item">خروج از اکانت</li>
+</ul>
+<footer style="background: #0056b3;margin-right: 100px;margin-left: 100px" >
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-6 text-right">
+            <ul class="breadcrumb" style="background: #0056b3">
+                <li><a href="#" class="text-white"> از کجا شروع کنم؟</a> <span class="divider">|</span></li>
+                <li><a href="#" class="text-white">صفحه اصلی</a> <span class="divider">   |</span></li>
+                <li><a href="#" class="text-white">تماس با پشتیبانی</a> <span class="divider">|</span></li>
+                <li><a href="#" class="text-white">ما چه کاره ایم؟</a> <span class="divider"></span></li>
+            </ul>
+        </div>
+            <div class="col-6">
+                <p class="text-white text-center">تمامی حقوق مادی و معنوی متعلق به واونت است.</p>
+            </div>
+    </div>
+    <br>
+</footer>
+</body>
+</html>

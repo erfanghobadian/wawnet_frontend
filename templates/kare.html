@@ -1,0 +1,249 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+<script src="{% static 'js/myJs.js' %}"></script>
+{% block breadcrumb_block %}
+    <li><a href="#">داشبورد</a> <span class="divider">/</span></li>
+    <li><a href="#">کاره های من</a> <span class="divider">/</span></li>
+{% endblock %}
+{% block body_block %}
+    <div class="text-right" style="margin-left: 100px;margin-right: 100px">
+        <div class="jumbotron" id="first">
+            <div class="row">
+                <div class="col-4">
+                    <img id="kianbtn" src="/static/img/remove.png">
+                    کاره های من
+                </div>
+                <div class="col-4">
+                    <p class="text-center">کاره جدید بسازید</p>
+                </div>
+            </div>
+            <div id="rest1">
+                <div class="row" dir="ltr">
+                    <div class="col-4 text-center">
+                        <img src="{% static 'img/Rectangle 29.png' %}">
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <br>
+                        <p class="text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است. چاپگرها
+                            و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                            نیاز و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،
+                            حال
+                            و
+                            آینده
+                            شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+                            ای
+                            علی
+                            الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">آیدی کاره</th>
+                            <th scope="col">عنوان کاره</th>
+                            <th scope="col">مهارت های مرتبط</th>
+                            <th scope="col">قیمت(تومان)</th>
+                            <th scope="col">نمونه کارها</th>
+                            <th scope="col">وضعیت کاره</th>
+                            <th scope="col">امکانات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میتوانم یک کارت ویزیت طراحی کنم.</td>
+                            <td><span class="badge badge-dark">طراحی گرافیک</span>
+                            </td>
+                            <td>۱۱۰۰۰۰</td>
+                            <td>
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                            </td>
+                            <td><span class="badge badge-warning text-white">در انتظار تایید</span></td>
+                            <td><span class="col-4"><span class="fas fa-pen "></span> </span><span class="col-4"><span
+                                    class="fas fa-eye"></span></span><span class="col-4"> <span
+                                    class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میتوانم برنامه نویسی اندروید انجام دهم.</td>
+                            <td><span class="badge badge-dark">برنامه نویسی</span>+
+                            </td>
+                            <td>۳۴۵۰۰۰۰</td>
+                            <td>
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                            </td>
+                            <td>۲ آگهی انجام شده - ۸۱۰ امتیاز</td>
+                            <td><span class="col-4"><span class="fas fa-pen "></span> </span><span class="col-4"><span
+                                    class="fas fa-eye"></span></span><span class="col-4"> <span
+                                    class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میتوانم به زبان فارسی و انگلیسی تولید محتوا انجام دهم.</td>
+                            <td><span class="badge badge-dark">تولید محتوا</span>+
+                            </td>
+                            <td>۱۲۰۰۰۰</td>
+                            <td>
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                            </td>
+                            <td>۰ آگهی انجام شده - ۰ امتیاز</td>
+                            <td><span class="col-4"><span class="fas fa-pen "></span> </span><span class="col-4"><span
+                                    class="fas fa-eye"></span></span><span class="col-4"> <span
+                                    class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میتوانم تعمیرات کولر انجام دهم.</td>
+                            <td><span class="badge badge-dark">طراحی گرافیک</span>+
+                            </td>
+                            <td>۷۰۰۰۰</td>
+                            <td>
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                                <img style="width: 45px" class="rounded-circle" src="{% static 'img/kian.jpg' %}">
+                            </td>
+                            <td><span class="badge badge-danger">رد شده(چرا؟)</span></td>
+                            <td><span class="col-6"><span class="fas fa-pen "></span> </span><span class="col-6"> <span
+                                    class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-4">
+                    <img id="kianbtn1" src="{% static 'img/remove.png' %}">
+                    کاره های فعال
+                    <br>
+                </div>
+            </div>
+            <div id="rest2">
+                <div class="text-center">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">آیدی آگهی</th>
+                            <th scope="col">عنوان آگهی</th>
+                            <th scope="col">آیدی کاره</th>
+                            <th scope="col">وضعیت</th>
+                            <th scope="col">قیمت(تومان)</th>
+                            <th scope="col">امکانات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {#                        {% for i in '1234' %}#}
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میخواهم یک کارت ویزیت برای من طراحی شود.</td>
+                            <td>۳۲۷۶
+                            </td>
+                            <td><span class="btn btn-link"> قبول سفارش</span></td>
+                            <td>پیشنهاد کارفرما: ۱۱۰۰۰۰</td>
+                            <td><span class="col-3"><span class="fas fa-pen "></span> </span></span><span class="col-3"><span
+                                    class="fas fa-eye"></span></span>
+                                <span class="col-3"><span class="fas fa-comment-alt"></span> </span> <span
+                                        class="col-3"> <span
+                                        class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میخواهم یک اپلیکیشن اندروید برای من طراحی شود.</td>
+                            <td>۳۲۷۶
+                            </td>
+                            <td><span class="badge badge-warning text-white">در انتظار تایید کارفرما</span></td>
+                            <td>پیشنهاد شما: ۲۳۴۰۰۰۰</td>
+                            <td><span class="col-3"><span class="fas fa-pen "></span> </span></span><span class="col-3"><span
+                                    class="fas fa-eye"></span></span>
+                                <span class="col-3"> <span
+                                        class="fas fa-times"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میخواهم یک اپلیکیشن اندروید برای من طراحی شود.</td>
+                            <td>۳۲۷۶
+                            </td>
+                            <td><span class="btn btn-link">شروع به کار</span></td>
+                            <td>۸۵۰۰۰۰</td>
+                            <td><span class="col-6"><span
+                                    class="fas fa-eye"></span></span>
+                                <span class="col-6"><span class="fas fa-comment-alt"></span> </span>
+                            </td>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میخواهم یک اپلیکیشن اندروید برای من طراحی شود.</td>
+                            <td>۳۲۷۶
+                            </td>
+                            <td><span class="btn btn-link">درصد پیشرفت ۸۰</span></td>
+                            <td>توافق شده : ۹۰۰۰۰۰</td>
+                            <td></span><span class="col-6"><span
+                                    class="fas fa-eye"></span></span>
+                                <span class="col-6"><span class="fas fa-comment-alt"></span> </span>
+                            </td>
+                        </tr>
+
+                        {#                        {% endfor %}#}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-4">
+                    <img id="kianbtn2" src="{% static 'img/remove.png' %}">
+                    آرشیو کاره های انجام شده
+                    <br>
+                </div>
+            </div>
+            <div id="rest3">
+                <div class="text-center">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">آیدی آگهی</th>
+                            <th scope="col">عنوان آگهی</th>
+                            <th scope="col">آیدی کاره</th>
+                            <th scope="col">قیمت(تومان)</th>
+                            <th scope="col">امکانات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in '1234' %}
+                            <tr>
+                                <th scope="row">۱۰۳۲</th>
+                                <td>من میخوام یک کارت ویزیت برای من طراحی شود.</td>
+                                <td>
+                                    ۹۸۷۳
+                                <td>۱۱۰۰۰۰</td>
+                                <td><span class="fas fa-eye"></span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

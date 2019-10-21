@@ -1,0 +1,150 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+{% block js_add %}
+    <link rel="stylesheet" href="/static/css/tagsinput.css">
+    <script src="/static/js/tagsinput.js"></script>
+
+    {#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css">#}
+    <!-- Include Choices CSS -->
+    {#    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">#}
+    <!-- Include Choices JavaScript -->
+    {#    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>#}
+    {#    ```#}
+    {#    <link rel="stylesheet" href="/node_modules/choices.js/public/assets/styles/base.min.css">#}
+    {#    <link rel="stylesheet" href="/node_modules/choices.js/public/assets/styles/choices.min.css">#}
+    {#    <script src="/node_modules/choices.js/public/assets/scripts/choices.min.js"></script>#}
+    <link rel="stylesheet" href="/static/css/choices.css">
+    {#<link rel="stylesheet" href="/static/css/base.css">#}
+    <script src="/static/js/choices.js"></script>
+    <!-- Include base CSS (optional) -->
+    {#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css">#}
+    <!-- Include Choices CSS -->
+    {#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">#}
+    <!-- Include Choices JavaScript -->
+    {#<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>#}
+    ```
+{% endblock %}
+{% block style_block %}
+    <style>
+    </style>
+{% endblock %}
+{% block breadcrumb_block %}
+    <li><a href="#">داشبورد</a> <span class="divider">/</span></li>
+    <li><a href="#">کاره های من</a> <span class="divider">/</span></li>
+    <li><a href="#">افزودن کاره</a> <span class="divider"></span></li>
+{% endblock %}
+{% block body_block %}
+    <div class="col-12 d-block mx-auto">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <div class="jumbotron"></div>
+            </div>
+            <div class="col-6 text-center">
+                <div class="jumbotron">
+                    <label for="typeSelector">۱.کاره جدید در چه دسته ای قرار میگیرد؟</label>
+                    <select class="form-control" id="typeSelector">
+                        <option selected disabled>از لیست مرتبط ترین مهارت رو انتخاب کن.</option>
+                        <option>مهارت اول</option>
+                        <option>مهارت دوم</option>
+                        <option>مهارت سوم</option>
+                    </select>
+                </div>
+                <div class="jumbotron">
+                    <label for="nameSelector">۲.عنوان مناسب برای کاره انتخاب کن.</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend2">من میتوانم</span>
+                        </div>
+                        <input type="text" class="form-control" id="nameSelector" placeholder="یک پروژه انجام دهم."
+                               aria-describedby="inputGroupPrepend2" required>
+                        <p class="input-group-text" id="inputGroupPrepend2">dsf</p>
+                    </div>
+                </div>
+                <div class="jumbotron">
+                    <label for="priceChooser">
+                        ۳.مشخص کن این کار رو با چه هزینه ای انجام میدی.
+                    </label>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="priceChooser" placeholder="قیمت"
+                                       aria-describedby="inputGroupPrepend2" required>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend2">تومان</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend2">به ازای(اختیاری)</span>
+                                </div>
+                                <input type="text" class="form-control" id="priceChooser" placeholder="۱۰۰۰ خط کد"
+                                       aria-describedby="inputGroupPrepend2" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jumbotron">
+                    <label for="demo-2">۴.از چه ابزاری برای انجام کار استفاده میکنی؟</label>
+                    <select name="demo-2" id="demo-2" placeholder="برای انتخاب کلیک کنید." multiple>
+                        <option value="Dropdown item 1">موضوع اول</option>
+                        <option value="Dropdown item 2">موضوع دوم</option>
+                        <option value="Dropdown item 3">موضوع سوم</option>
+                        <option value="Dropdown item 4">موضوع چهارم</option>
+                    </select>
+                </div>
+                <div class="jumbotron">
+                    <div class="input-group d-inline">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend3">برچسب ها</span>
+                            <input class="d-inline-block" data-role="tagsinput" aria-describedby="inputGroupPrepend3"
+                                   required>
+                        </div>
+                    </div>
+                    <p class="text-muted">اضافه کردن برچسب کمک میکنه در جست و جو ها بیشتر دیده بشی.</p>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">توضیحات بیشتر(اختیاری)</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-secondary btn-lg">افزودن کاره</button>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+    </div>
+    <script>
+        let maxtext = 150;
+        let msg = $('p').eq(1);
+        msg.text(0 + "از" + maxtext);
+        let text = $('input').eq(0);
+        text.on('input', function () {
+            let text_length = maxtext - text.val().length;
+            {#alert("kian");#}
+            let text_remaining = maxtext - text_length;
+            msg.text(text_remaining + "از" + maxtext);
+        });
+        // bootstrap-tagsinput.js file - add in local
+        var firstElement = document.getElementById('demo-1');
+
+        var choices1 = new Choices(firstElement, {
+
+            delimiter: ',',
+
+            editItems: true,
+
+            maxItems: 5,
+
+            removeButton: true
+
+        });
+        var secondElement = new Choices('#demo-2', {allowSearch: true});
+
+    </script>
+{% endblock %}

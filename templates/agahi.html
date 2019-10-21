@@ -1,0 +1,157 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+<script src="{% static 'js/myJs.js' %}"></script>
+{% block breadcrumb_block %}
+    <li><a href="#">داشبورد</a> <span class="divider">/</span></li>
+    <li><a href="#">آگهی های من</a> <span class="divider">/</span></li>
+{% endblock %}
+{% block body_block %}
+    <div class="text-right" style="margin-left: 100px;margin-right: 100px">
+        <div class="jumbotron" id="first">
+            <div class="row">
+                <div class="col-4">
+                    <img id="kianbtn" src="/static/img/remove.png">
+                    آگهی های فعال
+                </div>
+                <div class="col-4">
+                    <p class="text-center">آگهی جدید بسازید</p>
+                </div>
+            </div>
+            <div id="rest1">
+                <div class="row" dir="ltr">
+                    <div class="col-4 text-center">
+                        <img src="{% static 'img/Rectangle 39.png' %}">
+                    </div>
+                    <div class="col-4">
+                        <br>
+                        <br>
+                        <p class="text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                            طراحان
+                            گرافیک است. چاپگرها
+                            و
+                            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                            نیاز و
+                            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،
+                            حال
+                            و
+                            آینده
+                            شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
+                            ای
+                            علی
+                            الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">آیدی آگهی</th>
+                            <th scope="col">عنوان آگهی</th>
+                            <th scope="col">وضعیت</th>
+                            <th scope="col">بودجه(تومان)</th>
+                            <th scope="col">امکانات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">۱۰۳۲</th>
+                            <td>من میخوام یک کارت ویزیت برای من طراحی شود.</td>
+                            <td><span class="badge badge-success">در انتظار تایید فری لنسر تا ۳۴ساعت دیگر</span>۷پیشنهاد
+                                داده شده
+                            </td>
+                            <td>۱۱۰۰۰۰</td>
+                            <td><span class="col-4"><span class="fas fa-pen"data-toggle="tooltip" data-placement="top" title="ویرایش آگهی"></span> </span><span class="col-4"><span
+                                    class="fas fa-eye" data-toggle="tooltip" data-placement="top" title="مشاهده آگهی"></span></span><span class="col-4"> <span
+                                    class="fas fa-times" data-toggle="tooltip" data-placement="top" title="حذف آگهی"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۱۰۹۸</th>
+                            <td scope="row">من میخواهم یک اپلیکیشن اندروید برای من طراحی شود</td>
+                            <td><span class="badge badge-warning text-white">در انتظار تایید</span></td>
+                            <td>۲۳۴۵۰۰۰</td>
+                            <td><span class="fas fa-pen" data-toggle="tooltip" data-placement="top" title="ویرایش آگهی"></span><span class="col-4"><span
+                                    class="fas fa-times" data-toggle="tooltip" data-placement="top" title="حذف آگهی"></span></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۷۴۳</th>
+                            <td>من می‌خواهم پنجاه مقاله 1000 کلمه‌ای در مورد فریلنسینگ برای من نوشته شود.</td>
+                            <td>ایجاد پرداخت امن</td>
+                            <td>۸۵۰۰۰۰</td>
+                            <td><span class="fas fa-comment-alt " data-toggle="tooltip" data-placement="top"
+                                      title="گفت و گو"></span><span class="col-4"><span
+                                    class="fas fa-eye" data-toggle="tooltip" data-placement="top"
+                                    title="مشاهده آگهی"></span></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۶۴۳</th>
+                            <td>من می‌خواهم پنجاه مقاله 1000 کلمه‌ای در مورد فریلنسینگ برای من نوشته شود.</td>
+                            <td><span class="badge badge-dark">به فلانی سپرده شد-۵۰درصد از کار پیش رفته</span></td>
+                            <td>۲۵۰۰۰۰</td>
+                            <td><span class="fas fa-comment-alt" data-toggle="tooltip" data-placement="top"
+                                      title="گفت و گو"></span><span class="col-4"><span
+                                    class="fas fa-eye" data-toggle="tooltip" data-placement="top" title="مشاهده آگهی"></span></span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">۸۳۹</th>
+                            <td>من می‌خواهم پنجاه مقاله 1000 کلمه‌ای در مورد فریلنسینگ برای من نوشته شود.</td>
+                            <td>آزاد کردن پرداخت امن</td>
+                            <td>۱۲۰۰۰۰</td>
+                            <td><span class="fas fa-comment-alt" data-toggle="tooltip" data-placement="top" title="گفت و گو"></span><span class="col-4"><span
+                                    class="fas fa-eye" data-toggle="tooltip" data-placement="top" title="مشاهده آگهی"> </span></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-4">
+                    <img id="kianbtn1" src="{% static 'img/remove.png' %}">
+                    آرشیو آگهی های انجام شده
+                    <br>
+                </div>
+            </div>
+            <div id="rest2">
+                <div class="text-center">
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">آیدی آگهی</th>
+                            <th scope="col">عنوان آگهی</th>
+                            <th scope="col">امتیاز فری لنسر به شما</th>
+                            <th scope="col">مبلغ پرداخت شده(تومان)</th>
+                            <th scope="col">امکانات</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in '1234' %}
+                            <tr>
+                                <th scope="row">۱۰۳۲</th>
+                                <td>من میخوام یک کارت ویزیت برای من طراحی شود.</td>
+                                <td>
+                                    <img src="{% static 'img/kian.jpg' %}" class="rounded-circle" style="width: 60px">
+                                    <span class="far fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                </td>
+                                <td>۱۱۰۰۰۰</td>
+                                <td><span class="fas fa-eye" data-toggle="tooltip" data-placement="top"
+                                          title="دیدن آگهی"></span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts_block %}
+{% endblock %}
