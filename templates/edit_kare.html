@@ -37,10 +37,34 @@
     <div class="col-12 d-block mx-auto">
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-4">
-                <div class="jumbotron"></div>
+            <div class="col-3 d-block mx-auto">
+                <h6 class="text-right">+افزودن نمونه کار
+                </h6>
+                <div class="jumbotron" style="border: 2px dashed gray">
+                    <br>
+                    <br>
+                    <br>
+                    <a href="#"> <img id="file-chooser" src="/static/img/download.png" class="d-block mx-auto"> </a>
+                    <br>
+                    <h6 class="text-center">یک فایل انتخاب کنید</h6>
+                    <input type="file" style="display:none;" id="fake-file-chooser">
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="jumbotron" style="border: 2px dashed gray"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="jumbotron" style="border: 2px dashed gray"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="jumbotron" style="border: 2px dashed gray"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-6 text-center">
+            <div class="col-7 text-center">
                 <div class="jumbotron">
                     <label for="typeSelector">۱.کاره جدید در چه دسته ای قرار میگیرد؟</label>
                     <select class="form-control" id="typeSelector">
@@ -110,7 +134,7 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-secondary btn-lg">افزودن کاره</button>
+                <button type="submit" class="btn btn-secondary btn-lg">ویرایش کاره</button>
                 <br>
                 <br>
                 <br>
@@ -145,6 +169,8 @@
 
         });
         var secondElement = new Choices('#demo-2', {allowSearch: true});
-
+        $("#file-chooser").click(function () {
+            $('#fake-file-chooser').trigger('click');
+        })
     </script>
 {% endblock %}
