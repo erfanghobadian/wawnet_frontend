@@ -4,6 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name="robots" content="noindex">
+    <script src="https://use.typekit.net/hoy3lrg.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon"
@@ -23,7 +24,6 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/icon.css' %}">
     <link rel="stylesheet" href="{% static 'css/css/all.css' %}">
-    <script src="https://use.typekit.net/hoy3lrg.js"></script>
     <script>try {
         Typekit.load({async: true});
     } catch (e) {
@@ -557,7 +557,7 @@
         }
 
         #frame #sidepanel #bottom-bar button {
-            float: none;
+            float: right;
             border: none;
             width: 50%;
             padding: 10px 0;
@@ -570,7 +570,7 @@
 
         @media screen and (max-width: 735px) {
             #frame #sidepanel #bottom-bar button {
-                float: none;
+                float: left;
                 width: 100%;
                 padding: 15px 0;
             }
@@ -652,7 +652,7 @@
         }
 
         #frame .content .contact-profile .social-media {
-            float:right;
+            float: right;
         }
 
         #frame .content .contact-profile .social-media i {
@@ -706,7 +706,7 @@
 
         #frame .content .messages ul li.sent img {
             margin: 6px 8px 0 0;
-            float : right;
+            float: right;
         }
 
         #frame .content .messages ul li.sent p {
@@ -824,6 +824,9 @@
     <title></title>
 </head>
 <body dir="rtl">
+<br>
+<br>
+<br>
 <div class="row">
     <div class="col-2">
         <p>شما اینجایید</p>
@@ -846,7 +849,7 @@
                 data-placement="bottom">
             سید کیان کشفی پور
         </button>
-    </div>`
+    </div>
     <div class="col-10">
         <nav class="nav">
             <a class="nav-link active border border-info" href="#"> <i class="	fas fa-home"></i> داشبورد</a>
@@ -910,11 +913,10 @@
         </div>
         <div class="message-input">
             <div class="wrap">
-                <input type="text" placeholder="Write your message..."/>
-                <input id="file-input" type="file" name="name" style="display: none;"/>
-                <span class="fa fa-paperclip attachment" id="button" type="file" accept="image/png, image/jpeg"></span>
+                <input type="text" placeholder="پیام خود را وارد کنید..."/>
+                <input id="file-input" type="file" name="name" accept="image/png, image/jpeg" style="display: none;"/>
+                <span class="fa fa-paperclip attachment" id="button" type="file"></span>
                 <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-{#                                <input class="attachment" type="file">attach</input>python <man></man>#}
             </div>
         </div>
     </div>
@@ -922,13 +924,13 @@
         <div id="profile">
             <div class="wrap">
                 <img id="kian" src="/static/img/kian.jpg" class="online" alt="kian">
-                <p>Mike Ross</p>
+                <p>کیان کشفی پور</p>
                 <div id="status-options" class="float-right align-right text-right">
                     <ul>
                         <li id="status-online" class="active"><span class="status-circle"></span>
                             <p>آنلاین</p></li>
                         <li id="status-away"><span class="status-circle"></span>
-                            <p>رفته!</p></li>
+                            <p>دور از دسترس</p></li>
                         <li id="status-busy"><span class="status-circle"></span>
                             <p>مشغول</p></li>
                         <li id="status-offline"><span class="status-circle"></span>
@@ -956,7 +958,7 @@
                 <li class="contact active">
                     <div class="wrap">
                         <span class="contact-status busy"></span>
-                        <img  class="float-right" src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
+                        <img class="float-right" src="http://emilcarlsson.se/assets/harveyspecter.png" alt=""/>
                         <div class="meta">
                             <p class="name">علی انواری</p>
                             <p class="preview">یه هفته بیشتر فرصت نداری برای انجام پروژه!</p>
@@ -1047,7 +1049,7 @@
         </div>
         <div id="bottom-bar">
             {#			<button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>اضافه کردن</span></button>#}
-            <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>۷گفتوگو ۳۶پیام</span>
+            <button><span>۷گفتوگو ۳۶پیام</span>
             </button>
         </div>
     </div>
@@ -1101,7 +1103,7 @@
             }
             $('<li class="sent"><img src="http://emilcarlsson.se/assets/mikeross.png" alt="" /><p>' + message + '</p></li>').appendTo($('.messages ul'));
             $('.message-input input').val(null);
-            $('.contact.active .preview').html('<span>شما: </span>'+ message );
+            $('.contact.active .preview').html('<span>شما: </span>' + message);
             $(".messages").animate({scrollTop: $(document).height()}, "fast");
         };
 
@@ -1118,7 +1120,20 @@
         $('#button').on('click', function () {
             $('#file-input').trigger('click');
         });
-    })
+    });
+
+    $('.dropdown-toggle').dropdown();
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            html: true,
+            content: function () {
+                return $('.list-group').html()
+            },
+            title: function () {
+                return $('.popover-titleHTML').html()
+            }
+        });
+    });
     //# sourceURL=pen.js
 </script>
 </body>
