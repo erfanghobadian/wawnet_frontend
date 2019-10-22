@@ -21,7 +21,9 @@
 {% block style_block %}
 {% endblock %}
 </head>
+{% block dir_block %}
 <body dir="rtl">
+{% endblock %}
 <br>
 {# اون بالای بالا بخش شما اینجایید#}
 <div class="row">
@@ -38,6 +40,7 @@
 </div>
 {#پایان#}
 {#بخش نوبار و پاپ اور اسم کاربر#}
+{% block userInfo_block %}
 <div class="row">
     <div class="col-2">
         <button type="button" class="btn" style="color:white;background: #375170" data-container="body"
@@ -61,6 +64,7 @@
         </nav>
     </div>
 </div>
+{% endblock %}
 {#پایان#}
 <br>
 {#بخش وسط شامل فعالیت ها و وضعیت کاربر و تسک لیست#}

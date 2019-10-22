@@ -1,0 +1,115 @@
+{% extends 'dashboard.html' %}
+{% block userInfo_block %}
+    <div class="col-4">
+        <h3 class="text-center">+ویرایش پروفایل</h3>
+    </div>
+{% endblock %}
+{% block style_block %}
+    <style>   input[id="validationServerUsername"]::placeholder {
+        text-align: left;
+    }
+    </style>
+{% endblock %}
+{% block body_block %}
+    <div class="col-6 d-block mx-auto text-center">
+        <div class="jumbotron">
+            <div class="row text-right">
+                <div class="col-3">
+                    <p>تصویر پروفایل</p>
+                    <div class="align-items-center row d-block mx-auto" style="
+                    width: 123px;
+                    height: 124px;
+                    border: dashed 2px #cfd0d1;
+                        ">
+                        <br>
+                        <img src="/static/img/download-to-storage-drive.png" alt="" class="d-block mx-auto col-8">
+                    </div>
+                </div>
+                <div class="col-9">
+                    <p>مشخصات عمومی</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-7">
+                                <input type="text" class="form-control" placeholder="نام">
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" placeholder="نام خانوادگی">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group d-inline-block">
+                            <div class="input-group-prepend">
+                                <input type="text" class="form-control"
+                                       style="text-align: left;float: left"
+                                       id="validationServerUsername" dir="ltr"
+                                       placeholder="@username" aria-describedby="inputGroupPrepend3" required>
+                                <span class="input-group-text" id="inputGroupPrepend3">https://wawnet.ir/user/</span>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <select class="form-control">
+                            <option disabled selected>شهر محل سکونت خود را از لیست انتخاب کنید</option>
+                            <option>شهر اول</option>
+                            <option>شهر دوم</option>
+                            <option>شهر سوم</option>
+                            <option>شهر چهارم</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-6">
+                    <p class="text-right">
+                        شماره تلفن همراه
+                    <div class="input-group d-inline-block">
+                        <div class="input-group-prepend">
+                            <input type="text" class="form-control"
+                                   style="text-align: left;float: left"
+                                   id="validationServerUsername"
+                                   placeholder="۰۹۱۲۳۴۵۶۷۸۹" aria-describedby="inputGroupPrepend3" dir="ltr" required>
+                            <span class="input-group-text" id="inputGroupPrepend3" dir="ltr">+۹۸</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="text-right">
+                        نشانی ایمیل
+                    </p>
+                    <input type="text" dir="ltr" placeholder="example@mail.com" class="form-control text-left">
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron" style="height: 10px">
+            <button class="btn btn-light text-center justify-content-center align-items-center d-block mx-auto"
+                    style="margin-top: -85px;border: 2px solid gray"><h5
+                    class="text-center">
+                $ ویرایش اطلاعات هویتی
+            </h5></button>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-light text-center justify-content-center align-items-center d-block mx-auto"
+                    style="border: 2px solid gray;padding:5px 70px 5px 70px"><h5
+                    class="text-center">
+                تغییر رمزعبور
+            </h5></button>
+        </div>
+        <div class="jumbotron">
+            <h5 class="text-center">معرفی و سوابق</h5>
+            <p class="text-right text-muted" style="font-size: 12px">متن معرفی شما، مهم‌ترین توضیحیه که در معرفی خودتون
+                به کارفرما میگین. سعی کنین کوتاه و
+                مختصر، خودتون رو به گونه‌ای معرفی کنین که اعتماد کارفرما را جلب کنین.</p>
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+                    <button type="submit" class="btn btn-secondary btn-lg">ویرایش کاره</button>
+        <br>
+        <br>
+    </div>
+{% endblock %}
